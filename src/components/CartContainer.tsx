@@ -1,5 +1,13 @@
 import { useSelector } from 'react-redux'
-import { CartItems } from './CartItems'
+import CartItems from './CartItems'
+
+type Items = {
+  id: number
+  img: string
+  title: string
+  price: number
+  amount: number
+}
 
 type Store = {
   cart: {
@@ -33,16 +41,18 @@ const CartContainer = () => {
       </header>
       <div>
         {cartItems.map((item, id) => {
-          return <CartItems key={id} />
+          return <CartItems key={id} {...(item as Items)} />
         })}
       </div>
       <footer>
         <hr />
         <div className="flex flex-col items-end cart-total">
           <h4>
-            <span className='inline-block text-black bg-white h-22 w-22'>合計{total}円</span>
+            <span className="inline-block text-black bg-white h-22 w-22">
+              合計{total}円
+            </span>
           </h4>
-        <button className='btn creal-btn'>全削除</button>
+          <button className="btn creal-btn">全削除</button>
         </div>
       </footer>
     </section>
