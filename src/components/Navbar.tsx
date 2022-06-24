@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="relative ml-1 amount-continer">
           <div className='relative'>
           <CartIcon/>
-          <p className="w-5 h-5 absolute bg-white rounded-full text-black text-center left-[15px] top-[-20px] total-amount"><span className="absolute top-[-2px] left-[5px]">{amount}</span></p>
+          <p className="w-5 h-5 absolute bg-white rounded-full text-black text-center left-[15px] top-[-20px] total-amount"><span className="relative top-[-2px]">{amount}</span></p>
           </div>
           <div>
           <div>

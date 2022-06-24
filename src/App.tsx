@@ -1,4 +1,5 @@
 import './App.scss'
+import CartContainer from './components/CartContainer'
 import Earth from './components/Earth'
 import Navbar from './components/Navbar'
 
@@ -6,6 +7,7 @@ const App = () => {
   return (
     <div>
       <Navbar/>
+      <CartContainer/>
       <Earth />
     </div>
   )

@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
+import cartItems from "../cartItems"
 
 //買い物カゴの初期化
 const initialState = {
-  cartItems: [],
-  amount: 0,
+  cartItems: cartItems,
+  amount: 2,
   total: 0,
 }
 
