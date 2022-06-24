@@ -1,5 +1,6 @@
-import { useSelector } from 'react-redux'
-import CartItems from './CartItems'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearCart } from '../features/CartSlice'
+import CartItem from './CartItem'
 
 type Items = {
   id: number
@@ -18,7 +19,8 @@ type Store = {
 }
 
 const CartContainer = () => {
-  const { amount, cartItems, total } = useSelector(
+  const dispatch = useDispatch()
+  const { cartItems, amount, total } = useSelector(
     (store: Store) => store.cart
   )
 
@@ -27,7 +29,9 @@ const CartContainer = () => {
       <section>
         <header>
           <h2>買い物カゴ</h2>
-          <h4 className="empty-cart">{amount}個:何も入ってません</h4>
+          <h4 className="empty-cart">
+            <span>{amount}個:何も入ってません</span>
+          </h4>
         </header>
       </section>
     )
@@ -37,11 +41,13 @@ const CartContainer = () => {
     <section>
       <header>
         <h2>買い物カゴ</h2>
-        <h4 className="empty-cart">{amount}個</h4>
+        <h4 className="empty-cart">
+          <span>{amount}個</span>
+        </h4>
       </header>
       <div>
         {cartItems.map((item, id) => {
-          return <CartItems key={id} {...(item as Items)} />
+          return <CartItem key={id} {...(item as Items)} />
         })}
       </div>
       <footer>
@@ -52,7 +58,12 @@ const CartContainer = () => {
               合計{total}円
             </span>
           </h4>
-          <button className="btn creal-btn">全削除</button>
+          <button
+            onClick={() => dispatch(clearCart())}
+            className="btn creal-btn"
+          >
+            全削除
+          </button>
         </div>
       </footer>
     </section>
