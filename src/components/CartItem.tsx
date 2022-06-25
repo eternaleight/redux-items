@@ -49,11 +49,13 @@ const CartItem = ({ id, img, title, price, amount }: Items) => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-around">
+
             <button onClick={() => dispatch(increase(id))}>
               <PlusIcon />
             </button>
             {amount}
+            <div className='flex flex-col items-center'>
             <button
               onClick={() => {
                 amount === 1
@@ -63,6 +65,7 @@ const CartItem = ({ id, img, title, price, amount }: Items) => {
             >
               <MinusIcon />
             </button>
+            </div>
             <button
               onClick={() => dispatch(removeItem(id))}
               className="text-[12px]"
