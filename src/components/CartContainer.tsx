@@ -21,7 +21,7 @@ type Store = {
 const CartContainer = () => {
   const dispatch = useDispatch()
   const { cartItems, amount, total } = useSelector(
-    (store: Store) => store.cart
+    (state: Store) => state.cart
   )
 
   if (amount < 1) {

@@ -1,23 +1,36 @@
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import './App.scss'
 import CartContainer from './components/CartContainer'
 import Earth from './components/Earth'
 import Navbar from './components/Navbar'
+import { caluculateTotals } from './features/CartSlice'
+
+type Store = {
+  cart: {
+    cartItems: []
+    amount: number
+    total: number
+  }
+}
 
 const App = () => {
+  const dispatch = useDispatch()
+  const { cartItems } = useSelector((state: Store) => state.cart)
+  useEffect(() => {
+    dispatch(caluculateTotals())
+  }, [cartItems])
+
   return (
     <div>
-      <Navbar/>
-      <CartContainer/>
+      <Navbar />
+      <CartContainer />
       <Earth />
     </div>
   )
 }
 
 export default App
-
-
-
-
 
 // import './App.scss'
 // import Earth from './components/Earth'

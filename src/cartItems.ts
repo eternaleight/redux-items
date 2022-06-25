@@ -1,36 +1,36 @@
 const cartItems = [
   {
     id: 1,
-    title: "neovim",
-    price: "24000",
-    img: "Gotham.jpeg",
+    title: "Reduxの入門講座",
+    price: 1740,
+    img: "redux-1.png",
     amount: 1
   },
   {
     id: 2,
-    title: "tmux",
-    price: "20000",
+    title: "Geek-sns(WebSite)の構築講座",
+    price: 1740,
     img: "Gotham.jpeg",
     amount: 1
   },
   {
     id: 3,
-    title: "zsh",
-    price: "20000",
+    title: "Neovim(Colorscheme)の入門講座",
+    price: 1740,
     img: "Gotham.jpeg",
     amount: 1
   },
   {
     id: 4,
-    title: "vim",
-    price: "24000",
+    title: "High-speed-holodule(WebSite)の構築講座",
+    price: 1740,
     img: "Gotham.jpeg",
     amount: 1
   },
   {
     id: 5,
-    title: "typescript",
-    price: "24000",
+    title: "Typescript-block(WebApp)の構築講座",
+    price: 1740,
     img: "Gotham.jpeg",
     amount: 1
   },
