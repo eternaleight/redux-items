@@ -16,7 +16,7 @@ const CartItem = ({ id, img, title, price, amount }: Items) => {
     <div className="flex items-center justify-center mb-4 font-noto">
       <div className="flex items-center">
         <img
-          className="mx-4 max-md:mx-2 w-[200px] h-[120px] object-[-0.3px]"
+          className="mx-4 max-md:mx-2 w-[170px] max-w-[170px] h-[120px] object-[-0.3px]"
           src={img}
           alt={title}
         />
