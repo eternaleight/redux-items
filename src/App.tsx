@@ -7,7 +7,7 @@ import Modal from './components/Modal'
 import Navbar from './components/Navbar'
 import { caluculateTotals } from './features/cartSlice'
 
-type Store = {
+type Cart = {
   cart: {
     cartItems: []
     amount: number
@@ -15,16 +15,23 @@ type Store = {
   }
 }
 
+type Modal = {
+  modal: {
+    isOpen: boolean
+  }
+}
+
 const App = () => {
   const dispatch = useDispatch()
-  const { cartItems } = useSelector((state: Store) => state.cart)
+  const { cartItems } = useSelector((state: Cart) => state.cart)
+  const { isOpen } = useSelector((state: Modal) => state.modal)
   useEffect(() => {
     dispatch(caluculateTotals())
   }, [cartItems])
 
   return (
     <div>
-      <Modal/>
+      {isOpen && <Modal />}
       <Navbar />
       <CartContainer />
       <Earth />

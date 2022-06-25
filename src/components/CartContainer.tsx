@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { clearCart } from '../features/cartSlice'
+import {openModal} from '../features/modalSlice'
 import CartItem from './CartItem'
 
 type Items = {
@@ -59,7 +60,7 @@ const CartContainer = () => {
             </span>
           </h4>
           <button
-            onClick={() => dispatch(clearCart())}
+            onClick={() => dispatch(openModal())}
             className="btn creal-btn"
           >
             全削除

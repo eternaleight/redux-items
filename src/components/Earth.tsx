@@ -19,7 +19,7 @@ const Earth = () => {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <a
-          className="underline App-link"
+          className="z-[1] underline App-link"
           href=""
           rel="noopener noreferrer"
         >
