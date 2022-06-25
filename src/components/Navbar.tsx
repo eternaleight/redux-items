@@ -15,7 +15,13 @@ const Navbar = () => {
     <div>
       <div className="nav-center">
         <h3 className="text-center bg-gray-800 navCenter">
+          <a
+            className='cursor-pointer'
+            href=""
+            rel="noopener noreferrer"
+          >
           Redux Shop
+          </a>
         </h3>
         <div className="nav-container">
           <div className="relative ml-1 amount-continer">
