@@ -10,14 +10,13 @@ const initialState = {
 
 // type State = typeof initialState
 
-const cartItem =
-  {
-    id: 1,
-    title: "neovim",
-    price: 24000,
-    img: "Gotham.jpeg",
-    amount: 1
-  }
+const cartItem = {
+  id: 1,
+  title: 'neovim',
+  price: 24000,
+  img: 'Gotham.jpeg',
+  amount: 1,
+}
 
 type Item = typeof cartItem
 
@@ -49,7 +48,7 @@ const cartSlice = createSlice({
     },
 
     increase: (state, action) => {
-      const cartItem:any  = state.cartItems.find(
+      const cartItem: any = state.cartItems.find(
         (item) => item.id === action.payload
       )
       cartItem.amount = cartItem.amount + 1
@@ -78,6 +77,11 @@ const cartSlice = createSlice({
 
 // console.log(cartSlice)
 
-export const { clearCart, removeItem, increase, decrease, caluculateTotals } =
-  cartSlice.actions
+export const {
+  clearCart,
+  removeItem,
+  increase,
+  decrease,
+  caluculateTotals,
+} = cartSlice.actions
 export default cartSlice.reducer

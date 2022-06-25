@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { clearCart } from '../features/cartSlice'
-import {openModal} from '../features/modalSlice'
+import { openModal } from '../features/modalSlice'
 import CartItem from './CartItem'
 
 type Items = {

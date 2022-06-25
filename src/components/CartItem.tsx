@@ -23,26 +23,30 @@ const CartItem = ({ id, img, title, price, amount }: Items) => {
       </div>
       <div className="w-[60%] mr-2">
         <div className="flex justify-between h-[120px] w-auto bg-gray-900">
+          <div className="flex-col justify-between max-md:flex">
+            <div>
+              <h4 className="max-xxs:text-[13px] max-md:text-[15px] text-[18px]">
+                {title}
+              </h4>
+              <h4 className="max-xxs:text-[12px] text-[14px]">
+                ¥{price}
+              </h4>
+            </div>
 
-          <div className='flex-col justify-between max-md:flex'>
-          <div>
-          <h4 className="max-xxs:text-[13px] max-md:text-[15px] text-[18px]">
-            {title}
-          </h4>
-            <h4 className="max-xxs:text-[12px] text-[14px]">¥{price}</h4>
-          </div>
-
-          <div>
-            <h4 className="max-md:text-[12px] line-through text-[14px]">
-              ¥{price * 12}
-            </h4>
-            <h4 className="max-md:text-[12px] text-[14px]">
-              ¥{Math.floor((price / (price * 12)) * 1000)}%OFF
-            </h4>
-            <h4 className="max-md:text-[12px] text-[14px]">
-              <span className='bg-[#224872ff] mr-1'>ベストセラー</span><span className='bg-[#226322aa]'>改訂</span>
-            </h4>
-          </div>
+            <div>
+              <h4 className="max-md:text-[12px] line-through text-[14px]">
+                ¥{price * 12}
+              </h4>
+              <h4 className="max-md:text-[12px] text-[14px]">
+                ¥{Math.floor((price / (price * 12)) * 1000)}%OFF
+              </h4>
+              <h4 className="max-md:text-[12px] text-[14px]">
+                <span className="bg-[#224872ff] mr-1">
+                  ベストセラー
+                </span>
+                <span className="bg-[#226322aa]">改訂</span>
+              </h4>
+            </div>
           </div>
 
           <div className="flex flex-col items-center justify-center">

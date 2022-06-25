@@ -11,7 +11,9 @@ const Modal = () => {
         <h4 className="mb-2">買い物かごを全て空にしますか？</h4>
         <div className="btn-container">
           <button
-            onClick={() => dispatch(clearCart())&&dispatch(closeModal())}
+            onClick={() =>
+              dispatch(clearCart()) && dispatch(closeModal())
+            }
             className="px-1 mr-8 bg-gray-800 btn confirm-btn"
           >
             OK
