@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { removeItem, increase, decrease } from '../features/CartSlice'
+import { removeItem, increase, decrease } from '../features/cartSlice'
 import { MinusIcon, PlusIcon } from '../heroIcons'
 
 type Items = {

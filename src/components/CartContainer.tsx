@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { clearCart } from '../features/CartSlice'
+import { clearCart } from '../features/cartSlice'
 import CartItem from './CartItem'
 
 type Items = {

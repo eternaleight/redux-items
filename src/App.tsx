@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import './App.scss'
 import CartContainer from './components/CartContainer'
 import Earth from './components/Earth'
+import Modal from './components/Modal'
 import Navbar from './components/Navbar'
-import { caluculateTotals } from './features/CartSlice'
+import { caluculateTotals } from './features/cartSlice'
 
 type Store = {
   cart: {
@@ -23,6 +24,7 @@ const App = () => {
 
   return (
     <div>
+      <Modal/>
       <Navbar />
       <CartContainer />
       <Earth />
